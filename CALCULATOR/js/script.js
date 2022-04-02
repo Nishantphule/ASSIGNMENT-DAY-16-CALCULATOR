@@ -12,7 +12,7 @@ document.getElementById('calculator').appendChild(head)
 
 let P = document.createElement('p')
 P.id='description'
-P.innerText='THIS TASK IS TO CREATE A CALCULATOR USING DOM MANIPULATION to perform some basic mathematical operations'
+P.innerText='THE TASK IS TO CREATE A CALCULATOR USING DOM MANIPULATION TO PERFORM SOME BASIC MATHEMATICAL OPERATIONS'
 document.getElementById('calculator').appendChild(P)
 
 // creating a class calculator for table
@@ -34,7 +34,9 @@ table.id='row'
 document.getElementById('cal').appendChild(table)
 
 
+// here creating rows in the table to add all the buttons
 
+// 1.creating first row of buttons - 00,000,pi,delete
 let tr5 = document.createElement('tr')
 tr5.id='tr5'
 document.getElementById('row').appendChild(tr5)
@@ -80,6 +82,7 @@ document.getElementById('del').appendChild(delbtn)
 
 
 
+// 2. creating second row for - allclear,brackets and percent buttons 
 let tr0 = document.createElement('tr')
 tr0.id='tr0'
 document.getElementById('row').appendChild(tr0)
@@ -120,6 +123,7 @@ document.getElementById('percent').appendChild(percentbtn)
 
 
 
+// 3.  creating third row for - 7,8,9,divide button 
 let tr1 = document.createElement('tr')
 tr1.id='tr1'
 document.getElementById('row').appendChild(tr1)
@@ -158,6 +162,7 @@ document.getElementById('divide').appendChild(dividebtn)
 
 
 
+// 4.creating fourth row for - 4,5,6,multiply button 
 let tr2 = document.createElement('tr')
 tr2.id='tr2'
 document.getElementById('row').appendChild(tr2)
@@ -196,6 +201,7 @@ document.getElementById('multiply').appendChild(multiplybtn)
 
 
 
+// 5.creating fifth row for - 1,2,3,subtract button 
 let tr3 = document.createElement('tr')
 tr3.id='tr3'
 document.getElementById('row').appendChild(tr3)
@@ -238,6 +244,7 @@ document.getElementById('minus').appendChild(minusbtn)
 
 
 
+// 6. creating sixth row for - 0.decimal,equalsto.addition button 
 let tr4 = document.createElement('tr')
 tr4.id='tr4'
 document.getElementById('row').appendChild(tr4)
@@ -278,6 +285,14 @@ document.getElementById('plus').appendChild(plusbtn)
 
 
 
+// creating a function for buttons 
+
+// AC - will clear the all the data on screen
+// "="- will evaluate the data present on screen for that we will use eval()
+// "DEL"- will be used as a delete button 
+// "X" will be set for multiplication
+// pi button with innertext as "" will give 3.14 as output on screen when pressed 
+// and remaining button will give their innertext as a output on screen when we click on it
 let display = document.getElementById('result');
 let buttons = document.querySelectorAll('button');
 let displayout = ''
@@ -303,7 +318,7 @@ for(item of buttons){
             }  
         }
         else if (buttonText=='DEL'){
-            if(display.value=='ERROR'||display.value=='3.14'){
+            if(display.value=='ERROR'||display.value=='3.14'||display.value=='undefined'){
                 displayout = display.value.slice(0,0);
             display.value = displayout;
             }
